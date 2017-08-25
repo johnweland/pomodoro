@@ -2,6 +2,8 @@
 
 A simple 'Pomodoro' timer inspired by the Pomodoro timer project in the [Treehouse](http://teamtreehouse.com) JavaFX course.
 
+![Alt text](screenshot.png?raw=true "Screenshot of the Pomodoro app.")
+
 
 ## Getting Started
 
