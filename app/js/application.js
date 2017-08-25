@@ -1,4 +1,7 @@
 "use strict";
+const {remote} = require('electron')
+
+let win = remote.getCurrentWindow()
 
 /*
  * Global variables
@@ -16,7 +19,7 @@ function Attempt(msg, kind)  {
 	this.kind 				= kind
 	this.nextKind			= null
 	this.time 				= null
-	this.remainingTime 	= null
+	this.remainingTime 		= null
 
 	this.setTime(kind);
 	this.setAttempt();
@@ -153,6 +156,15 @@ $(document).ready(function(){
 	attempt = new Attempt(msg, "FOCUS");
 	$('#resume').hide()
 	$('#pause').hide()
+
+	
+	$('body').on('click', '#minimize', () => {
+		win.minimize()
+	})
+
+	$('body').on('click', '#close', () => {
+		win.close()
+	})
 
 	$('body').on('click', '#start', function(){
 		if(attempt.remainingTime <= 0) {

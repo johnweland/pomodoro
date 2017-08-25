@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Pomodoro</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/application.css">
 <body class="app">
+		<div class="appbar">
+			<div class="appbar__title"></div>
+			<div class="appbar__icons"> 
+				<span id="minimize">-</span>
+				<span id="close">&times;</span>
+			</div>
+		</div>
 		<div class="container">
 			<h1 id="header"> Focus Time </h1>
 			<p class="time">00:00</p>
@@ -23,14 +30,11 @@
 				<img src="images/restart.svg" height="15px"> Restart
 			</button>
 			<form>
-				<textarea id="message" placeholder="What are you doing?" rows="3"></textarea>
+				<textarea id="message" placeholder="What are you doing?" rows="8"></textarea>
 			</form>
-			<img src="images/pomodoro.svg" height="34px">
 		</div> <!-- container -->
-		<script
-  src="http://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+
+		<script src="js/jquery-3.2.1.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
 		<script src="js/application.js"></script>
 </body><!-- app -->
 </html>

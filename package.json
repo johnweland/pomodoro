@@ -1,0 +1,40 @@
+{
+  "name": "Pomodoro",
+  "version": "0.1.0",
+  "description": "A simple Pomodoro timer",
+  "repository": "https://github.com/johnweland/pomodoro.git",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+  	"dist": "electron-builder"
+  },
+  "author": "John Weland",
+  "license": "MIT",
+  "postinstall": "electron-builder install-app-deps",
+  "build": {
+    "appId": "me.johnweland.pomodoro",
+    
+    "mac": {
+      "category": "utilities",
+      "icon": "./build/pomodoro.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "./build/pomodoro.ico"
+    }
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^19.24.1"
+  }
+}
